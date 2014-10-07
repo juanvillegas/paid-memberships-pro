@@ -193,11 +193,11 @@
 							<td><?php echo $auser->membership?></td>	
 							<td>										
 								<?php if((float)$auser->initial_payment > 0) { ?>
-									<?php echo $pmpro_currency_symbol; ?><?php echo $auser->initial_payment?>
+									<?php echo UserAccount::getUserCurrencySymbol($auser->ID); ?><?php echo $auser->initial_payment?>
 								<?php } ?>
 								<?php if((float)$auser->initial_payment > 0 && (float)$auser->billing_amount > 0) { ?>+<br /><?php } ?>
 								<?php if((float)$auser->billing_amount > 0) { ?>
-									<?php echo $pmpro_currency_symbol; ?><?php echo $auser->billing_amount?>/<?php echo $auser->cycle_period?>
+									<?php echo UserAccount::getUserCurrencySymbol($auser->ID); ?><?php echo $auser->billing_amount?>/<?php echo $auser->cycle_period?>
 								<?php } ?>
 								<?php if((float)$auser->initial_payment <= 0 && (float)$auser->billing_amount <= 0) { ?>
 									-
