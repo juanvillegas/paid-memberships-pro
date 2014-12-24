@@ -7,6 +7,8 @@
 	
 	global $wpdb, $msg, $msgt, $pmpro_currency_symbol;
 
+	$pmpro_currency_symbol = '$';
+
 	//some vars
 	$gateway = pmpro_getOption("gateway");
 	global $pmpro_stripe_error, $pmpro_braintree_error, $pmpro_payflow_error, $pmpro_twocheckout_error, $wp_version;
